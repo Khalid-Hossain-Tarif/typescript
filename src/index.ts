@@ -56,3 +56,78 @@ let employee: {
 }
 employee.name ='Khalid'
 console.log(employee)
+
+
+//Type Aliases
+type Player = {
+    id: number,
+    phone: string,
+    email?: string,
+    name?: string,
+    msg?: string,
+    retire: (date: Date) => void
+}
+
+let player: Player = {
+    id: 1,
+    phone: '01777531675',
+    email: 'khalid3063454545@gmail.com',
+    retire: (date: Date) => {
+        console.log(date)
+    }
+}
+player.name ='Khalid'
+console.log(player)
+
+
+//Union Types
+function kgToLbs(weight: number | string): number {
+    if(typeof weight === 'number') {
+        return weight * 2.2
+    } else {
+        return parseInt(weight) * 2.2
+    }
+}
+
+kgToLbs(10)
+kgToLbs('10kg')
+
+
+//Intersection Types
+type Draggable = {
+    drag: () => void
+}
+
+type Resizable = {
+    resize: () => void
+}
+
+type UiWidget = Draggable & Resizable
+
+let textBox: UiWidget = {
+    drag: () => {},
+    resize: () => {}
+}
+
+
+//Literal Types (exact, specific)
+let costOne: 50 = 50
+// let costTwo: 100 = 50 //Type '50' is not assignable to type '100'
+
+type Quantity = 50 | 100
+let quantity: Quantity = 100
+
+type Metric = 'cm' | 'inch'
+let metric: Metric = 'cm'
+
+
+//Nullable Types
+function greet(name: string | null | undefined) {
+    if(name) { //check name for avoid error when name is null, undefined
+        console.log(name.toUpperCase());
+    } else {
+        console.log('Great!');
+    }
+}
+
+greet(undefined)

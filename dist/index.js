@@ -25,4 +25,28 @@ let employee = {
 };
 employee.name = 'Khalid';
 console.log(employee);
+let player = {
+    id: 1,
+    phone: '01777531675',
+    email: 'khalid3063454545@gmail.com',
+    retire: (date) => {
+        console.log(date);
+    }
+};
+player.name = 'Khalid';
+console.log(player);
+function kgToLbs(weight) {
+    if (typeof weight === 'number') {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.2;
+    }
+}
+kgToLbs(10);
+kgToLbs('10kg');
+let textBox = {
+    drag: () => { },
+    resize: () => { }
+};
 //# sourceMappingURL=index.js.map
