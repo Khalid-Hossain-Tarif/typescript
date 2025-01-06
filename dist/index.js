@@ -49,4 +49,49 @@ let textBox = {
     drag: () => { },
     resize: () => { }
 };
+let costOne = 50;
+let quantity = 100;
+let metric = 'cm';
+function greet(name) {
+    if (name) {
+        console.log(name.toUpperCase());
+    }
+    else {
+        console.log('Great!');
+    }
+}
+greet(undefined);
+function getCustomer(id) {
+    return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCustomer(0);
+console.log(customer === null || customer === void 0 ? void 0 : customer.birthday);
+let log = null;
+log === null || log === void 0 ? void 0 : log('a');
+let speed = null;
+speed = 50;
+let ride = {
+    speed: speed !== null && speed !== void 0 ? speed : 20
+};
+console.log(ride.speed);
+let value;
+value = 42;
+value = "Hello";
+value = true;
+let str;
+function unknownType(document) {
+    if (typeof document === 'string') {
+        document.toUpperCase();
+    }
+}
+function throwError(message) {
+    throw new Error(message);
+}
+function infiniteLoop() {
+    while (true) {
+        console.log("Looping forever...");
+    }
+}
+infiniteLoop();
+console.log("Looping forever...");
 //# sourceMappingURL=index.js.map
