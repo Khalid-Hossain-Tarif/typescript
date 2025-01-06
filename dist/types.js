@@ -84,14 +84,4 @@ function unknownType(document) {
         document.toUpperCase();
     }
 }
-function throwError(message) {
-    throw new Error(message);
-}
-function infiniteLoop() {
-    while (true) {
-        console.log("Looping forever...");
-    }
-}
-infiniteLoop();
-console.log("Looping forever...");
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=types.js.map
