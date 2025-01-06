@@ -204,16 +204,16 @@ function unknownType(document: unknown) {
 // It is used in scenarios where a function, variable, or type is meant to never produce a value.
 
 // Function that throws an error
-function throwError(message: string): never {
-    throw new Error(message);
-}
+// function throwError(message: string): never {
+//     throw new Error(message);
+// }
 
-// Function with an infinite loop
-function infiniteLoop(): never {
-    while (true) {
-        console.log("Looping forever...");
-    }
-}
+// // Function with an infinite loop
+// function infiniteLoop(): never {
+//     while (true) {
+//         console.log("Looping forever...");
+//     }
+// }
 
-throwError('ddd')
-console.log("Looping forever..."); //Error: unreachable code detected
+// throwError('ddd')
+// console.log("Looping forever..."); //Error: unreachable code detected
